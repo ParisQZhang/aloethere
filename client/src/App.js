@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Router, Switch, Route, NavLink } from 'react-router-dom';
 import { IoIosHome, IoIosLeaf, IoIosAddCircleOutline } from 'react-icons/io';
-import ApiService from './Services/ApiService';
+import ApiService from './services/ApiService';
 import usePushNotifications from './usePushNotifications';
 import moment from 'moment';
-import Home from './Containers/Home/Home';
-import Spinner from './Components/Spinner/Spinner';
-import Search from './Containers/Search/Search';
-import MyPlants from './Containers/MyPlants/MyPlants';
-import AddPlant from './Components/AddPlant/AddPlant';
-import history from './History';
+import Home from './containers/home/Home';
+import Spinner from './components/spinner/Spinner';
+import Search from './containers/search/Search';
+import MyPlants from './containers/myPlants/MyPlants';
+import AddPlant from './components/addPlant/AddPlant';
+import history from './history';
 import './App.css';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
   const [myPlants, setMyPlants] = useState([]);
   const [shouldWater, setShouldWater] = useState(false);
   const [modalIsOpen, setIsOpen] = React.useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const shouldIWater = () => {
     return myPlants.some((myPlant) => {
