@@ -1,5 +1,5 @@
 import React from 'react';
-import history from '../../History';
+import history from '../../history';
 import { GiDandelionFlower } from 'react-icons/gi';
 import greenImg from '../../assets/greenHomepagenarrow.png';
 import yellowImg from '../../assets/yellowHomepagenarrow.png';
@@ -23,6 +23,7 @@ function Home({ shouldWater }) {
         )}
         <button
           className={!shouldWater ? 'button_green' : 'button_yellow'}
+          id='check-plants'
           type="button"
           onClick={() => history.push('/myplants')}
         >
@@ -30,6 +31,7 @@ function Home({ shouldWater }) {
         </button>
         <button
           className={!shouldWater ? 'button_green' : 'button_yellow'}
+          id='find-plant'
           type="button"
           onClick={() => history.push('/plants')}
         >

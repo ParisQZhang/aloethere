@@ -8,11 +8,14 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/test.js --watch",
-    "heroku-postbuildx": "./scripts/heroku.build"
+    "heroku-postbuildx": "./scripts/heroku.build",
+    "integrationTest": "cypress run"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "cypress": "^4.12.1"
+  },
   "devDependencies": {}
 }

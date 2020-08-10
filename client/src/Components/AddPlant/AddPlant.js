@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import history from '../../History';
+import history from '../../history';
 import './AddPlant.css';
 
 function useQuery() {
