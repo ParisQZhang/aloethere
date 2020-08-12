@@ -21,12 +21,16 @@ function App() {
 
   const shouldIWater = () => {
     return myPlants.some((myPlant) => {
-      const interval = myPlant.plantInfo.water.split(' ')[0];
-      const new_date = moment(myPlant.lastWatered).add(interval, 'days');
-      const current = moment();
-      const diff = new_date.diff(current, 'days') + 1;
-      setLoading(false);
-      return diff < 0 ? true : false;
+      if(myPlant) {
+        console.log(myPlant)
+        const interval = myPlant.plantInfo.water.split(' ')[0];
+        const new_date = moment(myPlant.lastWatered).add(interval, 'days');
+        const current = moment();
+        const diff = new_date.diff(current, 'days') + 1;
+        setLoading(false);
+        return diff < 0 ? true : false;
+      }
+      return false;
     });
   };
   usePushNotifications();

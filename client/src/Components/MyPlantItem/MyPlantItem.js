@@ -56,7 +56,7 @@ function MyPlantItem({
   return (
     <div className="mylist">
       {getDifference(nextWatering) >= 0 ? (
-        <div className="myplantcard">
+        <div className="myplantcard" id={`plantcard-${myPlant.nickName}`}>
           <button type="button" className="delete_button" onClick={openModal}>
             x
           </button>
@@ -89,7 +89,7 @@ function MyPlantItem({
           </div>
         </div>
       ) : (
-        <div className="myplantcard">
+        <div className="myplantcard" id={`plantcard-${myPlant.nickName}`}>
           <button type="button" className="delete_button" onClick={openModal}>
             x
           </button>

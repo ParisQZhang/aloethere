@@ -51,6 +51,7 @@ function AddPlant({ createMyPlant, shouldWater }) {
       <h3 className="form_subtitle">What's their name?</h3>
       <p className="subtitle_desc">Every plant needs a name to feel loved!</p>
       <input
+        id="plant-name"
         type="text"
         className="form_input"
         name={nickName}
@@ -60,6 +61,7 @@ function AddPlant({ createMyPlant, shouldWater }) {
       />
       <h3 className="form_subtitle">When did you adopt them?</h3>
       <input
+        id="plant-bought"
         type="date"
         className="form_input"
         name={bought}
@@ -68,6 +70,7 @@ function AddPlant({ createMyPlant, shouldWater }) {
       />
       <h3 className="form_subtitle">When did you last water them?</h3>
       <input
+        id="plant-last-watered"
         type="date"
         className="form_input"
         name={lastWatered}
@@ -78,6 +81,7 @@ function AddPlant({ createMyPlant, shouldWater }) {
       <button
         className={!shouldWater ? 'form_btn_green' : 'form_btn_yellow'}
         type="submit"
+        id="add-plant-button"
       >
         Add my new plant
       </button>
