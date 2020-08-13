@@ -1,0 +1,9 @@
+{
+  "lastRun": "20200812104719-initial-schema.js",
+  "migrations": [
+    {
+      "title": "20200812104719-initial-schema.js",
+      "timestamp": 1597229922209
+    }
+  ]
+}

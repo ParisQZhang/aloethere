@@ -122,7 +122,7 @@ function Filter({ plants, filterPlants, shouldWater }) {
       >
         <div className="page1">
           <h3 className="form_subtitle">Are you an expert plant parent?</h3>
-          <div onChange={handleDifficulty}>
+          <div id="difficulty" onChange={handleDifficulty}>
             <label>
               <input
                 type="radio"
@@ -132,7 +132,7 @@ function Filter({ plants, filterPlants, shouldWater }) {
                 value="Low"
                 onChange={difficultyIsChecked}
               />
-              <div className="icon">
+              <div className="icon" id="value-low">
                 <IoIosStar size={25} />
               </div>
             </label>
@@ -158,14 +158,14 @@ function Filter({ plants, filterPlants, shouldWater }) {
                 onChange={difficultyIsChecked}
                 className={selectedDifficulty >= 3 ? 'selected' : 'unselected'}
               />
-              <div className="icon">
+              <div className="icon"  id="value-high">
                 <IoIosStar size={25} />
               </div>
             </label>
           </div>
 
           <h3 className="form_subtitle">Will you water it frequently?</h3>
-          <div onChange={handleWater}>
+          <div id="fill-water" onChange={handleWater}>
             <label>
               <input
                 type="radio"
@@ -204,10 +204,10 @@ function Filter({ plants, filterPlants, shouldWater }) {
             </label>
           </div>
           <h3 className="form_subtitle">What type of plant you prefer?</h3>
-          <div onChange={handleType}>
+          <div id="fern" onChange={handleType}>
             <label className="label_type">
               <input type="radio" value="Ferns" name="type" />
-              <div className="icon">
+              <div className="icon" id="value-fern">
                 <RiCheckboxCircleLine size={20} />
               </div>
               Ferns
@@ -255,7 +255,7 @@ function Filter({ plants, filterPlants, shouldWater }) {
         </div>
         <div className="page2">
           <h3 className="form_subtitle">How much light does your room have?</h3>
-          <div onChange={handleLight}>
+          <div id="lights" onChange={handleLight}>
             <label>
               <input
                 type="radio"
@@ -295,7 +295,7 @@ function Filter({ plants, filterPlants, shouldWater }) {
           </div>
 
           <h3 className="form_subtitle">How much humidity?</h3>
-          <div onChange={handleHumidity}>
+          <div id="humidity" onChange={handleHumidity}>
             <label>
               <input
                 type="radio"
@@ -335,7 +335,7 @@ function Filter({ plants, filterPlants, shouldWater }) {
           </div>
 
           <h3 className="form_subtitle">Do you want an airpurifying plant?</h3>
-          <div onChange={handleAirPurifying}>
+          <div id="air-purifying" onChange={handleAirPurifying}>
             <label>
               <input type="radio" id="air" name="air" value="true" />
               <div className="icon">

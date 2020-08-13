@@ -9,7 +9,7 @@ function PlantItem({ plant }) {
   const url = `/addplant?name=${name}&id=${id}`;
 
   return (
-    <div className="plantcard">
+    <div className="plantcard" id={`plantcard-${plant.commonName}`}>
       <div className="plantcard_img">
         <img className="circle_img" src={plant.imgUrl} alt={plant.commonName} />
       </div>
@@ -20,6 +20,7 @@ function PlantItem({ plant }) {
       <button
         className="add_button_yellow"
         type="button"
+        id='add-plant-button'
         onClick={() => history.push(url)}
       >
         <IoIosHeartEmpty style={{ verticalAlign: 'baseline' }} size={18} />
